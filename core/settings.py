@@ -16,7 +16,8 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = config('DEBUG', default=True, cast=bool)
-DEBUG = str(os.environ.get('DEBUG')) == "1"
+# DEBUG = str(os.environ.get('DEBUG')) == "1"
+DEBUG = TRUE
 
 
 # load production server from .env
