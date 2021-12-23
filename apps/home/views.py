@@ -2,7 +2,10 @@
 """
 Copyright (c) 2019 - present AppSeed.us
 """
+import os
 
+
+import os
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -22,8 +25,10 @@ from django.contrib.auth.models import User
 
 
 #Nanonets
-API_KEY = "geEnRk2-LXvy6-WhzgQjNzQu0YO-6iE7"
-model_id = "ca58d7f9-770c-44a8-83fa-f45f8815e668"
+
+
+API_KEY = os.environ.get('API_KEY')
+model_id = os.environ.get('MODEL_KEY')
 url0 = 'https://app.nanonets.com/api/v2/OCR/Model/' + model_id
 
 
